@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    const divs = document.querySelectorAll('div');
+    //Correct way to access NodeList items or to iterate through the list
+    console.log(divs[0].textContent); 
+
+    //Iterating through the NodeList
+    divs.forEach(div => {
+        console.log(div.textContent);
+    });
+  </script>
+</body>
+</html>
